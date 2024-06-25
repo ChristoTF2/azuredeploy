@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="inner-container">
+      <div class="header">New client</div>
+      <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Type Username" [(ngModel)]="searchName">
+      </div>
+      <div class="form-group">
+          <button class="search-button" (click)="searchCustomer()">Search</button>
+      </div>
+      <div class="status-message">
+          <div class="status-text">{{ statusMessage }}</div>
+      </div>
+      <div class="chosen-account">Chosen account: {{ chosenAccount2 ? chosenAccount2.name : 'Not selected yet' }}</div>
+    <div class="button-group">
+      <button class="add-button" (click)="addClient()">Add client</button>
+      <button class="cancel-button" (click)="onCancel()">Cancel</button>
+    </div>
+  </div>
+</div>

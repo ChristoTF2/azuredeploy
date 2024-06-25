@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-header>
+        <img [src]="workshop.image_url" alt="Workshop Logo" style="width: 100px; height: 100px;">
+        <mat-card-title>Invoice</mat-card-title>
+        <mat-card-subtitle>{{invoice.number}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <h2>Invoice Details</h2>
+        <p>Date: {{invoice.issue_date}}</p>
+        <p>Total: S./ {{invoice.total}}</p>
+        <p>Status: {{invoice.status}}</p>
+        <mat-divider></mat-divider>
+        <h2>Workshop Information</h2>
+        <p>Name: {{workshop.name}}</p>
+        <p>Address: {{workshop.address}}</p>
+        <p>Email: {{workshop.email}}</p>
+        <p>Phone: {{workshop.phone}}</p>
+        <mat-divider></mat-divider>
+        <h2>Customer Information</h2>
+        <p>Name: {{customer.name}}</p>
+        <p>Address: {{customer.address}}</p>
+        <p>Email: {{customer.email}}</p>
+        <p>Phone: {{customer.phone}}</p>
+        <mat-divider></mat-divider>
+        <h2>Details</h2>
+        <mat-table [dataSource]="details">
+            <!-- Description Column -->
+            <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+                <mat-cell *matCellDef="let detail"> {{detail.description}} </mat-cell>
+            </ng-container>
+
+            <!-- Amount Column -->
+            <ng-container matColumnDef="amount">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let detail"> S./ {{detail.amount}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+
+        </mat-table>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <button mat-raised-button color="primary" (click)="goBack()">Go Back</button>
+</mat-card>

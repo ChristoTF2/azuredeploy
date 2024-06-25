@@ -1,0 +1,253 @@
+{
+  "workshops": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "name": "AutoVIP Admin",
+      "address": "456 Oak Street, City",
+      "phone": "555-789-1234",
+      "email": "admin@autovip.com",
+      "image_url": "https://i.postimg.cc/BnRQw4hj/company-logo.png"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "autovip",
+      "password": "n2ca782e21"
+    },
+    {
+      "id": 2,
+      "username": "alejandro",
+      "password": "m12ssk726"
+    },
+    {
+      "id": 3,
+      "username": "maria",
+      "password": "m12ssk726"
+    },
+    {
+      "id": 4,
+      "username": "juan",
+      "password": "m12ssk726"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "workshop_id": 1,
+      "name": "Alejandro ACAAA",
+      "address": "789 Workshop Street, City",
+      "phone": "555-321-9876",
+      "email": "alejandro@example.com",
+      "image_url": "https://i.postimg.cc/zGBMZknL/persona1.png"
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "workshop_id": null,
+      "name": "Maria Rodriguez",
+      "address": "123 Main Street, City",
+      "phone": "555-456-7890",
+      "email": "xd",
+      "image_url": "https://i.postimg.cc/3wzvJ1Z1/persona2.png"
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "workshop_id": 1,
+      "name": "Juan Lopez",
+      "address": "456 Elm Street, City",
+      "phone": "555-654-3210",
+      "email": "woa",
+      "image_url": "https://i.postimg.cc/3wzvJ1Z1/persona3.png"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "plate": "ABC123",
+      "make": "Audi",
+      "model": "A1",
+      "year": 2018,
+      "color": "Gray",
+      "image_url": "https://i.postimg.cc/Qdcrnmsp/Audi-Car.png",
+      "mileage": 50000,
+      "customer_id": 1
+    },
+    {
+      "id": 2,
+      "plate": "DEF456",
+      "make": "Mitsubishi",
+      "model": "New Ask",
+      "year": 2019,
+      "color": "Blue",
+      "image_url": "https://i.postimg.cc/ZRR2Zxks/Mitsubishi-Car.png",
+      "mileage": 35000,
+      "customer_id": 1
+    },
+    {
+      "id": 3,
+      "plate": "GHI789",
+      "make": "Volkswagen",
+      "model": "Nivus",
+      "year": 2021,
+      "color": "White",
+      "image_url": "https://i.postimg.cc/sfZyhs86/Volkwagen-Car.png",
+      "mileage": 15000,
+      "customer_id": 3
+    }
+  ],
+  "histories": [
+    {
+      "id": 1,
+      "service_date": "2024-04-10",
+      "description": "Maintenance service",
+      "cost": 1500,
+      "mileage": 49000
+    },
+    {
+      "id": 2,
+      "service_date": "2023-12-15",
+      "description": "Tire replacement",
+      "cost": 1200,
+      "mileage": 45000
+    }
+  ],
+  "maintenances": [
+    {
+      "id": 1,
+      "status": "completed",
+      "lastVisitDate": "2024-04-25",
+      "comment": "Engine diagnostics",
+      "invoice_id": 1,
+      "customer_id": 1,
+      "workshop_id": 1,
+      "vehicle_id": 1,
+      "history_id": 1
+    },
+    {
+      "id": 2,
+      "status": "completed",
+      "lastVisitDate": "2024-04-30",
+      "comment": "Brake pads replacement",
+      "invoice_id": 2,
+      "customer_id": 3,
+      "workshop_id": 1,
+      "vehicle_id": 3,
+      "history_id": 2
+    },
+    {
+      "id": 3,
+      "status": "pending",
+      "lastVisitDate": "2024-05-05",
+      "comment": "Oil change",
+      "invoice_id": null,
+      "customer_id": 1,
+      "workshop_id": 1,
+      "vehicle_id": 2,
+      "history_id": null
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "number": "F2022001",
+      "issue_date": "2022-04-15",
+      "total": 1500,
+      "status": "Paid",
+      "detail": "detalles"
+    },
+    {
+      "id": 2,
+      "number": "F2022002",
+      "issue_date": "2022-06-20",
+      "total": 1200,
+      "status": "Paid",
+      "detail": "detalles"
+    }
+  ],
+  "details": [
+    {
+      "id": 1,
+      "description": "Maintenance service",
+      "amount": 800,
+      "maintenance_id": 1
+    },
+    {
+      "id": 2,
+      "description": "Tire replacement",
+      "amount": 700,
+      "maintenance_id": 1
+    },
+    {
+      "id": 3,
+      "description": "Engine repair",
+      "amount": 800,
+      "maintenance_id": 2
+    },
+    {
+      "id": 4,
+      "description": "Oil change",
+      "amount": 100,
+      "maintenance_id": 2
+    },
+    {
+      "id": 5,
+      "description": "New brakes",
+      "amount": 300,
+      "maintenance_id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Motor Oil (5W-30)",
+      "quantity": 100,
+      "price": 20,
+      "image_url": "https://i.postimg.cc/ABC123/motor-oil.png",
+      "workshop_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Brake Pads",
+      "quantity": 50,
+      "price": 40,
+      "image_url": "https://i.postimg.cc/XYZ789/brake-pads.png",
+      "workshop_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Tires (Set of 4)",
+      "quantity": 20,
+      "price": 300,
+      "image_url": "https://i.postimg.cc/GHI789/tires.png",
+      "workshop_id": 1
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "type": "info",
+      "title": "System Update",
+      "message": "The system will update in 15 minutes. Please save your work.",
+      "timestamp": "2024-06-01T12:00:00Z",
+      "read": false
+    }
+  ],
+  "advertising": [
+    {
+      "id" : "1",
+      "comName": "AutoVIP",
+      "comImage":"https://i.postimg.cc/BnRQw4hj/company-logo.png",
+      "workshopId": 1,
+      "image_url" : "https://i.postimg.cc/VL55XtX9/dia-del-trabajador.jpg",
+      "slogan": "Keep your vehicle running smoothly!",
+      "priceMsg": "Major Maintenance and Electronic Tuning from S/ 499.",
+      "disMsg": "YOU ASKED FOR IT, AND STARTING TODAY, WE'RE BACK WITH A 20% DISCOUNT ON ENGINE REPAIRS",
+      "repairMsg" : "Get your Engine Repair done and receive a 20% discount on labor for this service. Engine noises, loss of power in your vehicle – we provide the solution."
+    }
+  ]
+}
